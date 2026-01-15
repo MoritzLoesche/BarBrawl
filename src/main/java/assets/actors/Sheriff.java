@@ -5,6 +5,9 @@ import java.awt.Image;
 
 
 public class Sheriff extends Enemy{
+
+    int deaths;
+    int trouble;
     
     int moves;
     
@@ -24,4 +27,14 @@ public class Sheriff extends Enemy{
         }
         return attack;
     }
+
+    if(health == 0){
+        deaths = deaths++;
+        while(i = 0 , i < math.pow(2,deaths) , i++){
+            generate(sherrif);
+        }
+}
+
+    
+    
 }
