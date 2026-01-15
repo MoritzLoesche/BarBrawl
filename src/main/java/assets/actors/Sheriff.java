@@ -24,4 +24,19 @@ public class Sheriff extends Enemy{
         }
         return attack;
     }
+
+    int deaths = 0;
+
+    if(health == 0){
+        deaths = deaths++;
+        while(i = 0, i < math.pow(2,deaths), i++){
+            generate(Sherrif);
+        }
+}
+                
+        
+
+
+    
+
 }
