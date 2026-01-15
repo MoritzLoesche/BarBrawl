@@ -13,7 +13,7 @@ import java.awt.Image;
  */
 class Enemy extends GameAsset{
     
-    int health, damage, attack;
+    int health, damage, attack, sightrange;
     
     public Enemy(int x, int y, Image img, String name) {
         super(x, y, img, name);
