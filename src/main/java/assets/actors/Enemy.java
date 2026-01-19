@@ -11,7 +11,7 @@ import java.awt.Image;
  *
  * @author administrator
  */
-class Enemy extends GameAsset{
+class Enemy extends NPC{
     
     int health, damage, attack;
     
