@@ -18,7 +18,7 @@ public class Sheriff extends Enemy{
 
         damage = 10000;
 
-        if(inside == false){
+        while(inside == false){
             this.Image = imghorse;
             movespeed = 5;
         }
@@ -45,8 +45,7 @@ public class Sheriff extends Enemy{
     if(health == 0){
         deaths = deaths++;
         for(i = 0 , i < math.pow(2,deaths) , i++){
-            generate(Sherrif);
-        }
+            generate(Sherrif);}
     }
 
     if(NPC getsDamage){
