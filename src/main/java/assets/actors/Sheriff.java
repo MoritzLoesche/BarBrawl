@@ -9,11 +9,17 @@ public class Sheriff extends Enemy{
     int deaths;
     int trouble;
     
-    int moves;
+    int movespeed;
     
-    public Sheriff(int x, int y, Image img, String name) {
+    public Sheriff(int x, int y, Image img, String name, boolean inside) {
         super(x, y, img, name);
-        moves = 3;
+        movespeed = 2;
+
+        if(inside == false){
+            this.Image = imghorse;
+            movespeed = 5;
+        }
+        
     }
     
     public Sheriff(int x, int y, Image img, String name, int damage, int attack, int moves) {
@@ -36,9 +42,9 @@ public class Sheriff extends Enemy{
     if(health == 0){
         deaths = deaths++;
         for(i = 0 , i < math.pow(2,deaths) , i++){
-            generate(sherrif);
+            generate(Sherrif);
         }
-}
+    }
 
     if(NPC getsDamage){
         trouble = trouble + 1;
