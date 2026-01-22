@@ -6,8 +6,9 @@ import java.awt.Image;
 
 public class Sheriff extends Enemy{
 
-    int deaths;
-    int trouble;
+    int deaths = 0;
+    int trouble = 0;
+    int healthpoints;
     int damage;
     int movespeed;
     
@@ -15,9 +16,9 @@ public class Sheriff extends Enemy{
         super(x, y, img, name);
         
         movespeed = 2;
-
+        //wenn der Sheriff jemanden trifft dann ist er aus dem Spiel
         damage = 10000;
-
+        //der Sheriff läuft auf den Straßen mit seinem Pferd, das ihn schneller macht
         while(inside == false){
             this.Image = imghorse;
             movespeed = 5;
@@ -36,18 +37,18 @@ public class Sheriff extends Enemy{
         }
         return attack;
     }
-
+    //der Sheriff soll zu bestimmten Momenten einfach in der Nähe des Spielers auftauchen
     void teleport(int[] arr){
         setX(arr[0]);
         setY(arr[1]);
     }
-
-    if(health == 0){
+    //wenn der Spieler den Sheriff tötet, verdoppelt sich seine Anzahl
+    if(healthpoints == 0){
         deaths = deaths++;
         for(i = 0 , i < math.pow(2,deaths) , i++){
-            generate(Sherrif);}
+            generate(Sheriff);}
     }
-
+    //wenn zu oft gegen "das Gesetz" verstoßen wird, erscheint der Sheriff beim Spieler
     if(NPC getsDamage){
         trouble = trouble + 1;
     }
