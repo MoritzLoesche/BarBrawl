@@ -28,13 +28,27 @@ public class Sheriff extends Enemy{
         return attack;
     }
 
+    void teleport(int[] arr){
+        setX(arr[0]);
+        setY(arr[1]);
+    }
+
     if(health == 0){
         deaths = deaths++;
-        while(i = 0 , i < math.pow(2,deaths) , i++){
+        for(i = 0 , i < math.pow(2,deaths) , i++){
             generate(sherrif);
         }
 }
 
-    
+    if(NPC getsDamage){
+        trouble = trouble + 1;
+    }
+    if(NPC alive == false){
+        trouble = trouble + 20;
+    }
+    if(trouble >= 40){
+        teleport(entrance);
+        trouble = 0;
+    }
     
 }
