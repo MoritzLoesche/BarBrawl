@@ -8,12 +8,15 @@ public class Sheriff extends Enemy{
 
     int deaths;
     int trouble;
-    
+    int damage;
     int movespeed;
     
     public Sheriff(int x, int y, Image img, String name, boolean inside) {
         super(x, y, img, name);
+        
         movespeed = 2;
+
+        damage = 10000;
 
         if(inside == false){
             this.Image = imghorse;
