@@ -18,14 +18,13 @@ public class Sheriff extends Enemy{
         super(x, y, img, name);
         
         movespeed = 2;
-        //wenn der Sheriff jemanden trifft dann ist er aus dem Spiel
-        damage = 10000;
         //der Sheriff läuft auf den Straßen mit seinem Pferd, das ihn schneller macht
         while(inside == false){
             this.Image = imghorse;
             movespeed = 5;
         }
-        
+        //wenn der Sheriff jemanden trifft dann ist er aus dem Spiel
+        damage = 10000;
     }
     //Alternative, bisher unbenutzte Klasse des Sherrifs
     public Sheriff(int x, int y, Image img, String name, int damage, int attack, int moves) {
