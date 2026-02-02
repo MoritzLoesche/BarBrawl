@@ -45,7 +45,6 @@ public class Sheriff extends Enemy{
         setX(arr[0]);
         setY(arr[1]);
     }
-    
     //wenn zu oft gegen "das Gesetz" verstoßen wird, erscheint der Sheriff beim Spieler
     if(NPC getsDamage){
         trouble = trouble + 1;
